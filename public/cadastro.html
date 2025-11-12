@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | ME DESPACHE</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" style="display:flex; justify-content:space-between; align-items:center; padding:1rem 3rem; background:white; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+    <div style="display:flex; align-items:center; gap:0.5rem;">
+      <img src="img/midislogoE (1).png" alt="Ícone da loja" width="42" height="42" />
+      <h1 style="font-size:1.25rem; font-weight:700; color:#350d3f;">ME DESPACHE</h1>
+    </div>
+    <nav>
+      <ul style="display:flex; gap:2rem; list-style:none;">
+        <li><a class="nav-link" href="index.html">Início</a></li>
+        <li><a class="nav-link" href="#">Produtos</a></li>
+        <li><a class="nav-link" href="#">Sobre</a></li>
+        <li><a class="nav-link" href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <style>
+    
+/* ==============================
+   TELA DE CADASTRO - ME DESPACHE
+============================== */
+
+.cadastro-container {
+  max-width: 420px;
+  margin: -4rem auto 5rem;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.cadastro-container h2 {
+  text-align: center;
+  color: #51275b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #6d4177;
+  box-shadow: 0 0 0 2px rgba(109, 65, 119, 0.2);
+  outline: none;
+}
+
+.hero-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #51275b;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #6d4177;
+  transform: scale(1.03);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.login-link a {
+  color: #51275b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.login-link a:hover {
+  color: #350d3f;
+}
+
+  </style>
+
+  <!-- HERO -->
+  <section class="hero" style="padding:6rem 1rem;">
+    <h1 class="hero-title">Crie sua conta</h1>
+    <p class="hero-subtitle">Cadastre-se e entre para o ritmo digital!</p>
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section class="cadastro-container">
+    <h2>Cadastro</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmar-senha">Confirmar senha</label>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Repita a senha" required />
+      </div>
+
+      <button type="submit" class="hero-btn">Cadastrar</button>
+
+      <p class="login-link">Já tem uma conta? <a href="#">Entrar</a></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0a0a12; color:white; text-align:center; padding:2rem 1rem; margin-top:5rem;">
+    <h3 style="font-weight:700; color:white;">ME DESPACHE</h3>
+    <p style="opacity:0.9;">Sua loja em ritmo digital</p>
+    <div style="margin-top:1rem;">
+      <a href="#" class="footer-link">Sobre</a> |
+      <a href="#" class="footer-link">Contato</a> |
+      <a href="#" class="footer-link">Termos</a> |
+      <a href="#" class="footer-link">Privacidade</a>
+    </div>
+    <p style="margin-top:1rem; font-size:0.875rem; color:#9ca3af;">
+      © 2025 ME DESPACHE. Todos os direitos reservados.
+    </p>
+  </footer>
+</body>
+</html>
