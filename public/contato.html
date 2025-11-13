@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CORREÇÃO: fechar a tag link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/contato.css" />
+    <title>Contato</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="img/MEDESPACHEpp-removebg-preview.png" alt="logo" class="logo" />
+
+            <ul id="nav_list">
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">Contatos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <a href="#" class="login-link">Contatar</a>
+        </nav>
+    </header>
+
+    <section class="page-title">
+        <h2>Contatos</h2>
+        <h1>Nossos contatos</h1>
+        <p>
+            Nossa equipe está pronta para ajudar você a dar o próximo passo. Vamos transformar suas ideias em realidade! 
+            Digitalize seu negócio agora.
+        </p>
+    </section>
+
+    <main id="main_container">
+        <section id="contacts_container">
+            <h3>Entre em contato</h3>
+            <p>Preencha o formulário e entraremos em contato o mais breve possível.</p>
+
+            <!-- Card Telefone -->
+            <div class="card-wrapper">
+                <a href="tel:+5571940028922" class="contact-card phone" title="Ligar">
+                    <div class="card-icon"><i class="fa-regular fa-phone-waveform"></i></div>
+                </a>
+                <div class="card-infos">
+                    <p>Telefone</p>
+                    <span>(71) 94002-8922</span>
+                </div>
+            </div>
+
+            <!-- Card Localização (link limpo para o maps) -->
+            <div class="card-wrapper">
+                <a href="https://www.google.com/maps?q=Senai+Cimatec+Salvador" target="_blank" rel="noopener" class="contact-card location" title="Abrir localização">
+                    <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                </a>
+                <div class="card-infos">
+                    <p>Localização</p>
+                    <span>Senai Cimatec - Orlando Gomes, Salvador - BA.</span>
+                </div>
+            </div>
+
+            <!-- Card E-mail -->
+            <div class="card-wrapper">
+                <a href="mailto:exemplo@email.com" class="contact-card email" title="Enviar e-mail">
+                    <div class="card-icon"><i class="fa-regular fa-envelope"></i></div>
+                </a>
+                <div class="card-infos">
+                    <p>E-mail</p>
+                    <span>exemplo@email.com</span>
+                </div>
+            </div>
+
+            <!-- Card WhatsApp -->
+            <div class="card-wrapper">
+                <a href="https://api.whatsapp.com/send?phone=5571940028922" target="_blank" rel="noopener" class="contact-card whatsapp" title="WhatsApp">
+                    <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                </a>
+                <div class="card-infos">
+                    <p>WhatsApp</p>
+                    <span>(71) 94002-8922</span>
+                </div>
+            </div>
+
+            <h4>Nos siga nas redes sociais!</h4>
+            <div id="social_media_icons">
+                <a href="#" class="icon-link facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="icon-link linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="icon-link github"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon-link instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <section id="contact_form_container">
+            <h3>Contatar</h3>
+
+            <form method="post" id="contact_form">
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" required rows="5"></textarea>
+                </div>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <img src="img/midislogoE (1).png" alt="logo" class="footer-logo" />
+        <div id="footer_link_content">
+            <ul class="footer-list">
+                <li><h3 class="list-title">Produtos</h3></li>
+                <li><a href="#" class="footer-link">Desktop</a></li>
+                <li><a href="#" class="footer-link">Comércio</a></li>
+                <li><a href="#" class="footer-link">Tecnologia</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

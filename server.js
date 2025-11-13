@@ -1,12 +1,17 @@
 const express = require('express');
 const mysql = require('mysql2');
 const path = require('path');
+const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = process.env.PORT || 3010;
 
-// Criação da conexão com o banco MySQL
-const conexao = mysql.createConnection({
+// Configura para processar dados de formulário e JSON
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Conexão com MySQL
+const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'cimatec',
@@ -14,7 +19,7 @@ const conexao = mysql.createConnection({
 });
 
 // Testa a conexão
-conexao.connect((err) => {
+connection.connect((err) => {
     if (err) {
         console.error('❌ Erro ao conectar ao MySQL:', err);
         return;
@@ -22,10 +27,10 @@ conexao.connect((err) => {
     console.log('✅ Conectado ao banco de dados MySQL!');
 });
 
-// Define a pasta pública (arquivos estáticos)
+// Serve arquivos estáticos da pasta "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rotas principais
+// Rota principal (home)
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'cadastro.html'));
 });
@@ -42,10 +47,6 @@ app.get('/sobre', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'sobre.html'));
 });
 
-// Rota 404
-app.use((req, res) => {
-    res.status(404).send('<h1>404 - Página não encontrada</h1><a href="/">Voltar para a página inicial</a>');
-});
 
 // Inicia o servidor
 app.listen(PORT, () => {
